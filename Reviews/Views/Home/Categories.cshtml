@@ -1,0 +1,28 @@
+﻿
+@model IEnumerable<Reviews.Models.Category>
+
+  @{
+      ViewData["Title"] = "Categories";
+      Layout = "~/Views/Shared/_Layout.cshtml";
+  }
+
+    <h1>Categories</h1>
+    @foreach (var category in Model)
+    {
+        <div>
+            <a href="/home/index">
+                @category.Name
+            </a>
+        </div>
+    }
+
+
+
+
+
+
+
+
+
+
+

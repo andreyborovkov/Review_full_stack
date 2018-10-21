@@ -2,21 +2,13 @@
 @model Reviews.Models.Review
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-    <link href="~/CSS/Main.css" rel="stylesheet"/>
-</head>
-<body>
     <h1>Details for @Model.Title</h1>
     <img src="@Model.ImageURL" />
     <h2>@Model.ReviewCategory</h2>
     <p>@Model.Content</p>
-</body>
-</html>
+

@@ -9,10 +9,12 @@ namespace Reviews.Controllers
     public class HomeController : Controller
     {
         private IReviewRepository reviewRepo;
+        private ICategoryRepository categoryRepo;
 
-        public HomeController(IReviewRepository dogRepo)
+        public HomeController(IReviewRepository reviewRepo, ICategoryRepository categoryRepo)
         {
-            this.reviewRepo = dogRepo;
+            this.reviewRepo = reviewRepo;
+            this.categoryRepo = categoryRepo;
         }
 
         public ViewResult Index()
@@ -23,7 +25,13 @@ namespace Reviews.Controllers
 
         public ViewResult Details(int id)
         {
-            var model = reviewRepo.FindById(id);
+            var model = reviewRepo.GetById(id);
+            return View(model);
+        }
+
+        public ViewResult Categories()
+        {
+            var model = categoryRepo.GetAll();
             return View(model);
         }
 

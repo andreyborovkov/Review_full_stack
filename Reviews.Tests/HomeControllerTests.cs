@@ -12,13 +12,14 @@ namespace Reviews.Tests
     {
 
         IReviewRepository reviewRepo;
+        ICategoryRepository categoryRepo;
         HomeController underTest;
 
         public HomeControllerTests()
         {
             reviewRepo = Substitute.For<IReviewRepository>();
-
-            underTest = new HomeController(reviewRepo);
+            categoryRepo = Substitute.For<ICategoryRepository>();
+            underTest = new HomeController(reviewRepo, categoryRepo);
         }
 
         [Fact]
@@ -60,7 +61,7 @@ namespace Reviews.Tests
         public void Details_Sets_Dog_To_Model()
         {
             var expectedModel = new Review();
-            reviewRepo.FindById(1).Returns(expectedModel);
+            reviewRepo.GetById(1).Returns(expectedModel);
             var result = underTest.Details(1);
 
             var model = result.Model;
