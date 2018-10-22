@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -11,9 +10,17 @@
     <title>@ViewData["Title"]</title>
     <link href="~/CSS/Main.css" rel="stylesheet" />
 </head>
+
+
 <body>
-    <header>Header</header>
+    <header><div>Header</div></header>
+    <nav>
+        <a href="/Home/Categories">Home</a>
+        <a href="/Home/Index">Representation</a>
+        <a href="">Something</a>
+    </nav>
     @RenderBody()
-    <footer>Footer</footer>
+    <footer><div>Footer</div></footer>
 </body>
 </html>
+

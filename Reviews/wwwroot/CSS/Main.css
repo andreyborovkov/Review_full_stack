@@ -1,5 +1,62 @@
-﻿body {
-    background-color:dimgray;
-    align-content:center
-
+﻿
+html{
+    width:80%;
+    background-color:#1e0707;
+    margin: auto
 }
+nav {
+    background-color: #420303;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+nav a {
+    padding: .5em 2em;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: red;
+}
+
+header {
+    background-image: url("http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/3g/4m/p03g4m8p.jpg");
+    padding: 3em 0;
+    font-size: 2em;
+    border-bottom-style: solid;
+    border-width: 2px;
+    text-align:center;
+}
+header div{
+    color:white;
+}
+
+body {
+    background-color: #674949;
+    border-style: solid;
+    border-width: 2px;
+    text-align:center;
+      
+}
+
+div a{
+    color:#420303;
+}
+body a:hover {
+    color: red;
+}
+body img{
+    width:50%;
+}
+footer {
+    background-color: aqua;
+    border-top-style: solid;
+    border-width: 2px;
+    text-align: center;
+    background-color:#390000;
+    margin-top:2em;
+}
+    footer div {
+        color: antiquewhite;
+    }
