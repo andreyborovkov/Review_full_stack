@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Reviews.Models;
 
-namespace TodoAppLive
+namespace Reviews
 {
     public class Repository<T>
             where T : class

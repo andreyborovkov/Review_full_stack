@@ -1,0 +1,31 @@
+﻿
+@model Reviews.Models.Review
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <script>
+        var reviewId = @Model.Id;
+    </script>
+
+    <h1>Details for @Model.Title</h1>
+    <img src="@Model.ImageURL" />
+    <h2>@Model.Category.Name</h2>
+    <p>@Model.Content</p>
+
+    <section>
+        <h2>Comments</h2>
+        <ol id="comment-list">
+        </ol>
+    </section>
+
+    <h3>New Comment</h3>
+    <textarea id="new-comment"></textarea>
+    <button id="save-comment">Save</button>
+
+
+@section Scripts {
+    <script src="~/comments.js"></script>
+}

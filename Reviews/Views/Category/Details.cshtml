@@ -1,0 +1,27 @@
+﻿@model Reviews.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@Model.Name</h1>
+@foreach (var review in Model.Reviews)
+{
+    <div>
+        <a href="/review/details/@review.Id">
+            @review.Title
+        </a>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+

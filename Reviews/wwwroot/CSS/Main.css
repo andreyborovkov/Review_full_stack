@@ -1,13 +1,12 @@
 ﻿
 html{
     width:80%;
-    background-color:#1e0707;
-    margin: auto
+    background-color:black;
+    margin: auto;
 }
 nav {
-    background-color: #420303;
-    border-bottom-style: solid;
-    border-width: 2px;
+    background-color: darkcyan;
+    border-bottom: 2px solid white;
 }
 
 nav a {
@@ -21,41 +20,36 @@ nav a:hover {
 }
 
 header {
-    background-image: url("http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/3g/4m/p03g4m8p.jpg");
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/10/61/68581830aba88fb.jpg");
     padding: 3em 0;
     font-size: 2em;
-    border-bottom-style: solid;
-    border-width: 2px;
-    text-align:center;
+    border-bottom: 2px solid white;
+    text-align: center;
 }
 header div{
     color:white;
 }
 
 body {
-    background-color: #674949;
-    border-style: solid;
-    border-width: 2px;
-    text-align:center;
-      
+    background-color: lightslategray;
+    border: 2px solid white;
+    text-align: center;
 }
 
 div a{
-    color:#420303;
+    color:black;
 }
 body a:hover {
     color: red;
 }
 body img{
-    width:50%;
+    width:30%;
 }
 footer {
-    background-color: aqua;
-    border-top-style: solid;
-    border-width: 2px;
+    background-color: darkcyan;
+    border-top: 2px solid white;
     text-align: center;
-    background-color:#390000;
-    margin-top:2em;
+    margin-top: 2em;
 }
     footer div {
         color: antiquewhite;

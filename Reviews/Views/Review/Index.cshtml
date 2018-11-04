@@ -4,11 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <h1>Home Page</h1>
+    <h1>All Reviews</h1>
     @foreach (var review in Model)
     {
         <div>
-            <a href="/Home/Details/@review.Id">
+            <a href="/Review/Details/@review.Id">
                 @review.Title
             </a>
         </div>

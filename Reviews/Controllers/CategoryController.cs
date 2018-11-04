@@ -6,34 +6,25 @@ using System.Threading.Tasks;
 
 namespace Reviews.Controllers
 {
-    public class HomeController : Controller
+    public class CategoryController : Controller
     {
-        private IReviewRepository reviewRepo;
         private ICategoryRepository categoryRepo;
 
-        public HomeController(IReviewRepository reviewRepo, ICategoryRepository categoryRepo)
+        public CategoryController(ICategoryRepository categoryRepo)
         {
-            this.reviewRepo = reviewRepo;
             this.categoryRepo = categoryRepo;
         }
 
         public ViewResult Index()
         {
-            var model = reviewRepo.GetAll();
+            var model = categoryRepo.GetAll();
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            var model = reviewRepo.GetById(id);
+            var model = categoryRepo.GetById(id);
             return View(model);
         }
-
-        public ViewResult Categories()
-        {
-            var model = categoryRepo.GetAll();
-            return View(model);
-        }
-
     }
 }

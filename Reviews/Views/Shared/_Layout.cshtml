@@ -9,18 +9,20 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData["Title"]</title>
     <link href="~/CSS/Main.css" rel="stylesheet" />
+
 </head>
 
 
 <body>
     <header><div>Header</div></header>
     <nav>
-        <a href="/Home/Categories">Home</a>
-        <a href="/Home/Index">Representation</a>
-        <a href="">Something</a>
+        <a href="/Category/Index">All Categories</a>
+        <a href="/Review/Index">All Reviews</a>
+        <a href="">TBD</a>
     </nav>
     @RenderBody()
     <footer><div>Footer</div></footer>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
 
