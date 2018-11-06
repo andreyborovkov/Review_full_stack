@@ -11,27 +11,30 @@
 </script>
 
 <h1>Details for @Model.Title</h1>
-<img src="@Model.ImageURL" />
 <h2>@Model.Category.Name</h2>
-<p>@Model.Content</p>
+<section id="instrumentDescription">
+    <img src="@Model.ImageURL" />
+    <p>@Model.Content</p>
+</section>
 
-<section>
+<section id="comments">
     <h2>Comments</h2>
     <ol id="comment-list"></ol>
 </section>
 
-<h3>New Comment</h3>
-<textarea id="new-comment"></textarea>
-<button id="save-comment">Save</button>
+<section id="newComment">
+    <h3>New Comment</h3>
+    <textarea id="new-comment"></textarea>
+    <button id="save-comment">Save</button>
+</section>
 
-<section>
+<section id="tags">
     <h2>Tags</h2>
     <ul id="tags-list"></ul>
     <h3>New Tag</h3>
     <input type="text" id="new-tag" />
     <button id="submit-new-tag">Submit</button>
 </section>
-
 
 
 @section Scripts {

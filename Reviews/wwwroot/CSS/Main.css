@@ -5,6 +5,8 @@ html{
     margin: auto;
 }
 nav {
+    display:flex;
+    justify-content:space-around;
     background-color: darkcyan;
     border-bottom: 2px solid white;
 }
@@ -34,6 +36,7 @@ body {
     background-color: lightslategray;
     border: 2px solid white;
     text-align: center;
+
 }
 
 div a{
@@ -43,8 +46,25 @@ body a:hover {
     color: red;
 }
 body img{
-    width:30%;
+    height:30%;
+    width:30%
 }
+
+#instrumentDescription {
+    margin: 3em;
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+    font-size:120%;
+}
+#instrumentDescription p {
+    margin-left:4em;
+}
+
+#comments ul{
+    
+}
+
 footer {
     background-color: darkcyan;
     border-top: 2px solid white;
