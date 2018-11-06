@@ -51,6 +51,14 @@ footer {
     text-align: center;
     margin-top: 2em;
 }
-    footer div {
-        color: antiquewhite;
-    }
+footer div {
+    color: antiquewhite;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+#tags-list li {
+    transition: opacity linear 2s;
+}

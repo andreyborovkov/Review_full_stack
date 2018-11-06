@@ -22,6 +22,8 @@ namespace Reviews
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<IReviewTagRepository, ReviewTagRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

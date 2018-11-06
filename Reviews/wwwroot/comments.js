@@ -45,3 +45,8 @@ function addCommentToDom(comment) {
     const ol = document.querySelector("#comment-list");
     ol.appendChild(li);
 }
+
+
+
+
+

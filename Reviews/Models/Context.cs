@@ -10,6 +10,7 @@ namespace Reviews.Models
     {
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,7 +28,21 @@ namespace Reviews.Models
 
             modelBuilder.Entity<Comment>().HasData(
                 new Comment() { Id = 1, Text = "Funny Comment", CreatedAt = new DateTime(2018, 11, 2), ReviewId = 3 }
-    );
+                );
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag() { Id = 1, Text = "6 string" },
+                new Tag() { Id = 2, Text = "Ibanez" },
+                new Tag() { Id = 3, Text = "Yamaha" }
+                );
+            modelBuilder.Entity<ReviewTag>().HasData(
+                new ReviewTag() { Id = 1, ReviewId = 1, TagId = 1 },
+                new ReviewTag() { Id = 2, ReviewId = 2, TagId = 1 },
+                new ReviewTag() { Id = 3, ReviewId = 3, TagId = 1 },
+                new ReviewTag() { Id = 4, ReviewId = 4, TagId = 1 },
+                new ReviewTag() { Id = 5, ReviewId = 2, TagId = 2 },
+                new ReviewTag() { Id = 6, ReviewId = 4, TagId = 2 },
+                new ReviewTag() { Id = 7, ReviewId = 3, TagId = 3 }
+                );
 
             base.OnModelCreating(modelBuilder);
         }

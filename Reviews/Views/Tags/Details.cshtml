@@ -1,0 +1,20 @@
+﻿
+@model Reviews.Models.Tag
+
+@{
+    ViewData["Title"] = "Tags";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.Text</h1>
+
+<ul>
+    @foreach (var reviewTag in Model.ReviewTags)
+    {
+        <li>
+            <a href="/Home/Details/@reviewTag.ReviewId">
+                @reviewTag.Review.Title
+            </a>
+        </li>
+    }
+</ul>
